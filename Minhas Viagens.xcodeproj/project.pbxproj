@@ -12,6 +12,8 @@
 		533D6B4C22DD31A000D4A661 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 533D6B4A22DD31A000D4A661 /* Main.storyboard */; };
 		533D6B4E22DD31A100D4A661 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 533D6B4D22DD31A100D4A661 /* Assets.xcassets */; };
 		533D6B5122DD31A100D4A661 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 533D6B4F22DD31A100D4A661 /* LaunchScreen.storyboard */; };
+		533D6B5922DD361F00D4A661 /* LocaisViagemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 533D6B5822DD361F00D4A661 /* LocaisViagemViewController.swift */; };
+		533D6B5B22DD5C1300D4A661 /* ArmazenamentoDados.swift in Sources */ = {isa = PBXBuildFile; fileRef = 533D6B5A22DD5C1300D4A661 /* ArmazenamentoDados.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +24,8 @@
 		533D6B4D22DD31A100D4A661 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		533D6B5022DD31A100D4A661 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		533D6B5222DD31A100D4A661 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		533D6B5822DD361F00D4A661 /* LocaisViagemViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocaisViagemViewController.swift; sourceTree = "<group>"; };
+		533D6B5A22DD5C1300D4A661 /* ArmazenamentoDados.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArmazenamentoDados.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,6 +59,8 @@
 			isa = PBXGroup;
 			children = (
 				533D6B4622DD31A000D4A661 /* AppDelegate.swift */,
+				533D6B5A22DD5C1300D4A661 /* ArmazenamentoDados.swift */,
+				533D6B5822DD361F00D4A661 /* LocaisViagemViewController.swift */,
 				533D6B4822DD31A000D4A661 /* ViewController.swift */,
 				533D6B4A22DD31A000D4A661 /* Main.storyboard */,
 				533D6B4D22DD31A100D4A661 /* Assets.xcassets */,
@@ -135,8 +141,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				533D6B5B22DD5C1300D4A661 /* ArmazenamentoDados.swift in Sources */,
 				533D6B4922DD31A000D4A661 /* ViewController.swift in Sources */,
 				533D6B4722DD31A000D4A661 /* AppDelegate.swift in Sources */,
+				533D6B5922DD361F00D4A661 /* LocaisViagemViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -283,6 +291,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = BN5FZ32VEW;
 				INFOPLIST_FILE = "Minhas Viagens/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -300,6 +309,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = BN5FZ32VEW;
 				INFOPLIST_FILE = "Minhas Viagens/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
