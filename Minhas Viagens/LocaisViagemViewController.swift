@@ -31,7 +31,25 @@ class LocaisViagemViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
-        return locaisViagens.count
+        if locaisViagens.count == 0 {
+            
+            let emptyLabel = UILabel(frame: CGRect(x: 0, y: 0, width: tableView.bounds.size.width, height: tableView.bounds.size.height))
+            emptyLabel.text = "Lista vazia."
+            emptyLabel.textAlignment = .center
+            emptyLabel.textColor = .gray
+            
+            tableView.backgroundView = emptyLabel
+            tableView.separatorStyle = .none
+            return 0
+            
+        } else {
+            
+            tableView.backgroundView = nil
+            tableView.separatorStyle = .singleLine
+            
+            return locaisViagens.count
+            
+        }
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -74,10 +92,11 @@ class LocaisViagemViewController: UITableViewController {
                     viewControllerDestino.viagem = locaisViagens[indice]
                     viewControllerDestino.indiceSelecionado = indice
                 }
-            }else{
+            } else{
                 
                 viewControllerDestino.viagem = [:]
                 viewControllerDestino.indiceSelecionado = -1
+                
             }
             
         }
@@ -85,7 +104,9 @@ class LocaisViagemViewController: UITableViewController {
     }
     
     func atualizarViagens() {
+        
         locaisViagens = ArmazenamentoDados().listarViagens()
         tableView.reloadData()
+        
     }
 }

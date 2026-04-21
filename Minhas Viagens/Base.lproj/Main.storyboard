@@ -1,12 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="zJB-W8-gao">
-    <device id="retina4_7" orientation="portrait">
-        <adaptation id="fullscreen"/>
-    </device>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="24765" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="zJB-W8-gao">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="24743"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -15,15 +14,15 @@
             <objects>
                 <tableViewController id="AyQ-Pd-t0T" customClass="LocaisViagemViewController" customModule="Minhas_Viagens" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="fCB-qA-2BD">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="593"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="celulaReuso" id="KdB-3X-FAO">
-                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                <rect key="frame" x="0.0" y="50" width="375" height="51"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="KdB-3X-FAO" id="9KW-Dr-mj1">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="51"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                             </tableViewCell>
@@ -35,7 +34,7 @@
                     </tableView>
                     <navigationItem key="navigationItem" title="Minhas Viagens" id="hE1-8a-GgQ">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="nsN-yx-kTs">
-                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <color key="tintColor" systemColor="tintColor"/>
                             <connections>
                                 <segue destination="KMN-0r-Fs4" kind="show" identifier="verLocal" id="UCc-iX-gxi"/>
                             </connections>
@@ -51,13 +50,14 @@
             <objects>
                 <viewController title="Mapa" id="KMN-0r-Fs4" customClass="ViewController" customModule="Minhas_Viagens" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="JPI-8x-CaO">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="593"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" showsUserLocation="YES" translatesAutoresizingMaskIntoConstraints="NO" id="vyQ-Dw-bfu">
-                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="593"/>
                             </mapView>
                         </subviews>
+                        <viewLayoutGuide key="safeArea" id="3mi-NU-9dB"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="vyQ-Dw-bfu" firstAttribute="top" secondItem="3mi-NU-9dB" secondAttribute="top" id="4On-j8-K94"/>
@@ -65,7 +65,6 @@
                             <constraint firstItem="vyQ-Dw-bfu" firstAttribute="bottom" secondItem="3mi-NU-9dB" secondAttribute="bottom" id="HSI-Ta-Nxb"/>
                             <constraint firstItem="vyQ-Dw-bfu" firstAttribute="trailing" secondItem="3mi-NU-9dB" secondAttribute="trailing" id="vtg-4o-1fq"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="3mi-NU-9dB"/>
                     </view>
                     <connections>
                         <outlet property="mapa" destination="vyQ-Dw-bfu" id="vl2-FT-93X"/>
@@ -79,13 +78,14 @@
         <scene sceneID="pSW-YW-be8">
             <objects>
                 <navigationController id="zJB-W8-gao" sceneMemberID="viewController">
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="QQp-k3-Jx9">
-                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translucent="NO" id="QQp-k3-Jx9">
+                        <rect key="frame" x="0.0" y="20" width="375" height="54"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <color key="barTintColor" red="0.0" green="0.40000000000000002" blue="0.80000000000000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <textAttributes key="titleTextAttributes">
-                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <color key="textColor" systemColor="tintColor"/>
+                            <color key="textShadowColor" systemColor="linkColor"/>
                         </textAttributes>
                     </navigationBar>
                     <connections>
@@ -94,7 +94,15 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yxe-bG-MJD" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-383" y="21"/>
+            <point key="canvasLocation" x="-358" y="18"/>
         </scene>
     </scenes>
+    <resources>
+        <systemColor name="linkColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="tintColor">
+            <color red="0.0" green="0.53333333333333333" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
 </document>

@@ -25,14 +25,15 @@ class ViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDele
                 
                 configuraGerenciadorLocalizacao()
 
-            }else{//listar
+            } else{//listar
                 
                 exibirAnotacao(viagem: viagem)
+                
             }
         }
         
         //reconhecedor de gestos
-        let reconhecedorGesto = UILongPressGestureRecognizer(target: self, action: #selector(ViewController.marcar(gesture:)))
+        let reconhecedorGesto = UILongPressGestureRecognizer(target: self, action: #selector(self.marcar(gesture:)))
         reconhecedorGesto.minimumPressDuration = 2
         
         mapa.addGestureRecognizer(reconhecedorGesto)
@@ -52,6 +53,7 @@ class ViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDele
         
         let regiao: MKCoordinateRegion = MKCoordinateRegion(center: localizacao, span: span)
         self.mapa.setRegion(regiao, animated: true)
+        
     }
     
     func exibirAnotacao(viagem: Dictionary<String,String>){
@@ -101,11 +103,13 @@ class ViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDele
                         if let nome = dadosLocal.name{
                             
                             localCompleto = nome
-                        }else{
+                            
+                        } else {
                             
                             if let endereco = dadosLocal.thoroughfare{
                                 
                                 localCompleto = endereco
+                                
                             }
                         }
                     }
@@ -118,17 +122,19 @@ class ViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDele
                     self.exibirAnotacao(viagem: self.viagem)
                     
                 }else{
-                    print(erro)
+                    print(erro as Any)
                 }
             }
         }
     }
     
     func configuraGerenciadorLocalizacao(){
+        
         gerenciadorLocalizacao.delegate = self
         gerenciadorLocalizacao.desiredAccuracy = kCLLocationAccuracyBest
         gerenciadorLocalizacao.requestWhenInUseAuthorization()
         gerenciadorLocalizacao.startUpdatingLocation()
+        
     }
     
     func locationManager(_ manager: CLLocationManager, didChangeAuthorization status: CLAuthorizationStatus) {
@@ -151,6 +157,7 @@ class ViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDele
             alertaConfiguracao.addAction(acaoCancelar)
             
             present(alertaConfiguracao, animated: true, completion: nil)
+            
         }
     }
     
